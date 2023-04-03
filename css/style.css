@@ -1,0 +1,25 @@
+/* background */
+.background {
+    background-image: url('../img/wallp.jpg');
+    width: 100%;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+.cosmonaut {
+    position: absolute;
+}
+
+.cosmonaut2 {
+    position: absolute;
+}
+
+.planet {
+    position: absolute;
+}
+
+.spaceship {
+    position: absolute;
+}
