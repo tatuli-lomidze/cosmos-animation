@@ -7,19 +7,113 @@
     position: relative;
     z-index: 1;
 }
-
+/* text */
+.cosmostext {
+    z-index: 100;
+    font-size: 40px;
+    color: azure;
+    background-color: blueviolet;
+    position: absolute;
+    text-shadow: 2px 2px blanchedalmond;
+    box-shadow: 20px 20px 50px violet;
+    animation-name: cosmostext;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction:alternate;
+}
+/* images */
 .cosmonaut {
     position: absolute;
+    animation-name: cosmonautmove;
+    animation-duration: 35s;
+    animation-iteration-count: infinite; 
+    animation-timing-function: linear;
+    animation-direction: normal;
+    z-index: 3;
 }
 
 .cosmonaut2 {
     position: absolute;
+    top: 35%;
+    right: 1%;
+    animation-name: cosmonaut2move;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    
 }
 
 .planet {
     position: absolute;
+    top: 1%;
+    right: 1%;
+    animation-name: planetmove;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    z-index: 100;
 }
 
 .spaceship {
     position: absolute;
+    top: 2%;
+    left: 2%;
+    animation-name: spaceshipmove;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    z-index: 2;
+}
+
+/* keyframes */
+@keyframes cosmonautmove {
+    from {top: 20%; left: 11%}
+    to {top: 20%; left: 22%;}
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes cosmonaut2move {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes planetmove {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@keyframes spaceshipmove {
+    from {top: 2%; left: 2%;}
+    to {top: 50%; left: 50%;}
+}
+
+@keyframes cosmostext {
+    from {top: 0%; left: 0%;}
+    to {top: 5%; left: 5%;}
+
+}
+
+/* hover */
+.cosmostext:hover {
+    transform: scale(2)
+}
+.cosmonaut:hover {
+    opacity: 0.5;
+}
+
+.cosmonaut2:hover {
+    opacity: 0.5;
+}
+
+.planet:hover {
+    opacity: 0.5;
+}
+
+.spaceship:hover {
+    opacity: 0.5;
 }
